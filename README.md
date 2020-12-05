@@ -18,10 +18,10 @@
 欲しいものがあった際に友人や家族、他の方が記録したアイテムのレビューを確認する時
 
 ## 設計書
-UI FLOW
+UI FLOW :
 https://app.diagrams.net/#G1w6fZPGiRKN2m235yQPuJ5m4dkZ7IiC4F
 
-テーブル設計書
+テーブル設計書 :
 https://docs.google.com/spreadsheets/d/1LrTnRtR6-sK635FkQTSNVaFilylJpgXYAztvX66f948/edit#gid=0
 
 ### 機能一覧
