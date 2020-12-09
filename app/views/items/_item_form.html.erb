@@ -1,0 +1,28 @@
+<%= form_with model: @item, local: true do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class = 'form-group'>
+    <%= f.label :name %>　<span class="input-need">※必須</span>
+    <%= f.text_field :name, class: 'form-control', id: 'item_name' %>
+  </div>
+  <div class = 'form-group'>
+    <%= f.label :description %>　<span class="input-unneed">※任意</span>
+    <%= f.text_field :description, size: "60x4", class: 'form-control', id: 'item_description' %>
+  </div>
+  <div class = 'form-group'>
+    <%= f.label :point %>　<span class="input-unneed">※任意</span>
+    <%= f.text_field :point, size: "30x4", class: 'form-control', id: 'item_point' %>
+  </div>
+  <div class = 'form-group'>
+    <%= f.label :reference %>　<span class="input-unneed">※任意</span>
+    <%= f.text_field :reference, class: 'form-control', id: 'item_reference' %>
+  </div>
+  <div class = 'form-group'>
+    <%= f.label :recommend_degrees %> [1~5]　<span class="input-unneed">※任意</span>
+    <%= f.text_field :recommend_degrees, class: 'form-control', id: 'item_recommend_degrees' %>
+  </div>
+  <div class = 'form-group'>
+    <%= f.label :buy_memo %>　<span class="input-unneed">※任意</span>
+    <%= f.text_field :buy_memo, class: 'form-control', id: 'item_buy_memo' %>
+  </div>
+  <%= f.submit nil, class: 'btn btn-primary' %>
+<% end %>

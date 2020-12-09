@@ -1,0 +1,10 @@
+<li id="item-<%= item.id %>">
+  <%= link_to gravatar_for(item.user, size: 50), item.user %>
+  <span class="name"><%= link_to item.name, "#" %></span>
+  <span class="description"><%= item.description %></span><br>
+  <span class="recommend_degrees">おすすめ度：<%= item.recommend_degrees %></span><br>
+  <span class="reference"><%= link_to "商品URL", item.reference, target: :_blank %></span>
+  <span class="timestamp">
+    <%= time_ago_in_words(item.created_at) %>前に投稿
+  </span>
+</li>

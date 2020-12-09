@@ -17,7 +17,7 @@ RSpec.describe "Users", type: :system do
         end
       end
     end
-    
+
     context "管理者ユーザー以外の場合" do
       it "ぺージネーション、自分のアカウントのみ削除ボタンが表示されること" do
         create_list(:user, 30)
@@ -122,6 +122,7 @@ RSpec.describe "Users", type: :system do
     context "ページレイアウト" do
       before do
         login_for_system(user)
+        create_list(:item, 10, user: user)
         visit user_path(user)
       end
 
@@ -141,6 +142,23 @@ RSpec.describe "Users", type: :system do
 
       it "プロフィール編集ページへのリンクが表示されていることを確認" do
       expect(page).to have_link 'プロフィール編集', href: edit_user_path(user)
+      end
+
+      it "アイテムの件数が表示されていることを確認" do
+        expect(page).to have_content "アイテム (#{user.items.count})"
+      end
+
+      it "アイテムの情報が表示されていることを確認" do
+        Item.take(5).each do |item|
+          expect(page).to have_link item.name
+          expect(page).to have_content item.description
+          expect(page).to have_content item.user.name
+          expect(page).to have_content item.recommend_degrees
+        end
+      end
+
+      it "アイテムのページネーションが表示されていることを確認" do
+        expect(page).to have_css "div.pagination"
       end
     end
   end
