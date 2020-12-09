@@ -10,6 +10,7 @@ ja:
 
     models:
       user: ユーザー
+      item: アイテム
     attributes:
       user:
         id: ID
@@ -21,6 +22,18 @@ ja:
         sex: 性別
         created_at: 登録日時
         updated_at: 更新日時
+      item:
+        id: ID
+        name: アイテム名
+        description: 説明
+        point: ポイント
+        reference: 参照用URL
+        recommend_degrees: おすすめ度
+        user_id: 購入者のID
+        cook_memo: バイメモ
+
+
+
   date:
     abbr_day_names:
     - 日

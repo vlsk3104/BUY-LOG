@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :items, dependent: :destroy
   attr_accessor :remember_token
 
   before_save :downcase_email
@@ -39,6 +40,10 @@ class User < ApplicationRecord
 
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def feed
+    Item.where("user_id = ?", id)
   end
 
 
