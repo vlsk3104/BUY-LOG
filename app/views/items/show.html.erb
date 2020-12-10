@@ -1,0 +1,26 @@
+<% provide(:title, "#{@item.name}") %>
+<div class="container">
+  <div class="row">
+    <h2 class="item-name"><%= @item.name %></h2>
+    <div class="change-item">
+      <% if current_user == @item.user %>
+        <%= link_to "編集", edit_item_path(@item), class: 'edit-item' %>
+      <% end %>
+      <% if current_user.admin? || (current_user == @item.user) %>
+        <%= link_to "削除", item_path(@item), method: :delete, class: 'delete-item',
+                                      data: { confirm: "本当に削除しますか？" } %>
+      <% end %>
+    </div>
+    <h4><%= @item.description %></h4>
+    <h4 class="item-reference">参照：<%= link_to "#{@item.reference}", @item.reference, target: "_blank" %></h4>
+    <div class="point">
+      <h5 class="title-point">ポイント</h5>
+      <h5><%= @item.point %></h5>
+    </div>
+    <div class="show-item-other-info">
+      <div class="item-info">
+        <h5>おすすめ度：</h5><h4><%= @item.recommend_degrees %></h4>
+      </div>
+    </div>
+  </div>
+</div>

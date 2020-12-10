@@ -214,3 +214,63 @@ span.picture {
 .input-unneed {
   font-size: 13px;
 }
+
+//// アイテム個別ページ ////
+.item-user-name {
+  display: inline-block;
+}
+
+h2.item-name {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.item-reference {
+  margin-top: 30px;
+}
+
+.point {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  h5 {
+    font-size: 17px;
+  }
+}
+
+.title-point {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.show-item-other-info {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.item-other-info {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.item-info {
+  h5 {
+    font-size: 16px;
+    display: inline-block;
+  }
+  h4 {
+    font-size: 20px;
+    display: inline-block;
+  }
+}
+
+.change-item {
+  display: inline-block;
+}
+
+.edit-item .delete-item {
+  font-size: 15px;
+}
