@@ -22,7 +22,7 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['BUY-LOG'] %>
+  database: <%= ENV['buylog'] %>
   adapter: mysql2
   encoding: utf8mb4
   charset: utf8mb4
