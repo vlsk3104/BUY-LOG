@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
 
     def item_params
       params.require(:item).permit(:name, :discription, :point,
-                                   :reference, :recommend_degrees, :buy_memo)
+                                   :reference, :recommend_degrees, :buy_memo, :picture)
     end
 
     def correct_user

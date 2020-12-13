@@ -40,7 +40,9 @@ gem 'faker'
 gem 'jquery-rails', '4.3.1'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
-gem 'rename'
+gem 'rename' 
+gem 'carrierwave',  '1.2.2' 
+gem "mini_magick",             '>= 4.9.4'
 
 
 group :development, :test do
@@ -79,4 +81,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
+  gem 'fog', '1.42'
 end
