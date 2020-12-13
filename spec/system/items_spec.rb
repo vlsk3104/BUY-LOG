@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "Items", type: :system do
   let!(:user) { create(:user) }
   let!(:item) { create(:item, user: user) }
+  let!(:item) { create(:item, :picture, user: user) }
 
   describe "アイテム登録ページ" do
     before do
@@ -36,8 +37,15 @@ RSpec.describe "Items", type: :system do
         fill_in "ポイント", with: "一家に一台必須"
         fill_in "参照用URL", with: "https://cookpad.com/recipe/2798655"
         fill_in "おすすめ度", with: 5
+        attach_file "item[picture]", "#{Rails.root}/spec/fixtures/test_item.jpg"
         click_button "登録する"
         expect(page).to have_content "アイテムが登録されました！"
+      end
+
+      it "画像無しで登録すると、デフォルト画像が割り当てられること" do
+        fill_in "アイテム名", with: "test"
+        click_button "登録する"
+        expect(page).to have_link(href: item_path(Item.first))
       end
 
       it "無効な情報でアイテム登録を行うとアイテム登録失敗のフラッシュが表示されること" do
@@ -80,6 +88,7 @@ RSpec.describe "Items", type: :system do
         fill_in "ポイント", with: "一家に一台必須"
         fill_in "参照用URL", with: "henshu-https://cookpad.com/recipe/2798655"
         fill_in "おすすめ度", with: 1
+        attach_file "item[picture]", "#{Rails.root}/spec/fixtures/test_item2.jpg"
         click_button "更新する"
         expect(page).to have_content "アイテム情報が更新されました！"
         expect(item.reload.name).to eq "編集：test"
@@ -87,6 +96,7 @@ RSpec.describe "Items", type: :system do
         expect(item.reload.point).to eq "一家に一台必須"
         expect(item.reload.reference).to eq "henshu-https://cookpad.com/recipe/2798655"
         expect(item.reload.recommend_degrees).to eq 1
+        expect(item.reload.picture.url).to include "test_item2.jpg"
       end
 
       it "無効な更新" do
@@ -123,6 +133,7 @@ RSpec.describe "Items", type: :system do
         expect(page).to have_content item.point
         expect(page).to have_content item.reference
         expect(page).to have_content item.recommend_degrees
+        expect(page).to have_link nil, href: item_path(item), class: 'item-picture'
       end
     end
 

@@ -274,3 +274,9 @@ h2.item-name {
 .edit-item .delete-item {
   font-size: 15px;
 }
+
+.item-picture img {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
