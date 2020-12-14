@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "Items", type: :system do
   let!(:user) { create(:user) }
-  let!(:item) { create(:item, user: user) }
+  let!(:other_user) { create(:user) }
   let!(:item) { create(:item, :picture, user: user) }
+  let!(:comment) { create(:comment, user_id: user.id, item: item) }
 
   describe "アイテム登録ページ" do
     before do
@@ -137,15 +138,30 @@ RSpec.describe "Items", type: :system do
       end
     end
 
-    context "アイテムの削除", js: true do
-      it "削除成功のフラッシュが表示されること" do
+    context "コメントの登録＆削除" do
+      it "自分のアイテムに対するコメントの登録＆削除が正常に完了すること" do
         login_for_system(user)
         visit item_path(item)
-        within find('.change-item') do
-          click_on '削除'
+        fill_in "comment_content", with: "買って大成功"
+        click_button "コメント"
+        within find("#comment-#{Comment.last.id}") do
+          expect(page).to have_selector 'span', text: user.name
+          expect(page).to have_selector 'span', text: '買って大成功'
         end
-        page.driver.browser.switch_to.alert.accept
-        expect(page).to have_content 'アイテムが削除されました'
+        expect(page).to have_content "コメントを追加しました！"
+        click_link "削除", href: comment_path(Comment.last)
+        expect(page).not_to have_selector 'span', text: '買って大成功'
+        expect(page).to have_content "コメントを削除しました"
+      end
+
+      it "別ユーザーのアイテムのコメントには削除リンクが無いこと" do
+        login_for_system(other_user)
+        visit item_path(item)
+        within find("#comment-#{comment.id}") do
+          expect(page).to have_selector 'span', text: user.name
+          expect(page).to have_selector 'span', text: comment.content
+          expect(page).not_to have_link '削除', href: item_path(item)
+        end
       end
     end
   end
