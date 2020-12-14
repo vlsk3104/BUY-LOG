@@ -32,6 +32,11 @@ ja:
         user_id: 購入者のID
         cook_memo: バイメモ
         picture: アイテムの写真
+      comment:
+        user_id: コメント投稿者のID
+        item_id: コメントされたアイテムのID
+        content: コメント
+
 
 
   date:

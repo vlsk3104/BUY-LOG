@@ -1,4 +1,5 @@
 <% provide(:title, "#{@item.name}") %>
+<% @comments  = @item.feed_comment(@item.id) %>
 <div class="container">
   <div class="row">
     <div class="col-md-4">
@@ -29,6 +30,10 @@
         <h5>おすすめ度：</h5><h4><%= @item.recommend_degrees %></h4>
       </div>
     </div>
-  </div>
+    <div class="comment">
+        <%= render "comments/feed_comments" %>
+        <%= render "comments/new" %>
+      </div>
+   </div>
   </div>
 </div>
