@@ -36,6 +36,9 @@ ja:
         user_id: コメント投稿者のID
         item_id: コメントされたアイテムのID
         content: コメント
+        log:
+        item_id: バイログをつける料理のID
+        content: メモ
 
 
 
