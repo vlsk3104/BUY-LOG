@@ -1,0 +1,7 @@
+<div id="list-<%= @item.id %>" class="list-button">
+  <% if !current_user.nil? && current_user.list?(@item) %>
+    <%= render 'users/unlist' %>
+  <% else %>
+    <%= render 'users/list' %>
+  <% end %>
+</div>

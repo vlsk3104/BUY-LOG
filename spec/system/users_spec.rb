@@ -226,7 +226,7 @@ RSpec.describe "Users", type: :system do
         link = find('.like')
         expect(link[:href]).to include "/favorites/#{item.id}/create"
       end
-      
+
       it "お気に入り一覧ページが期待通り表示されること" do
         visit favorites_path
         expect(page).not_to have_css ".favorite-item"
@@ -248,7 +248,7 @@ RSpec.describe "Users", type: :system do
         expect(page).to have_content item.name
       end
     end
-    
+
     context "通知生成" do
       before do
         login_for_system(user)
@@ -273,7 +273,7 @@ RSpec.describe "Users", type: :system do
           expect(page).to have_content other_item.description
           expect(page).to have_content other_item.created_at.strftime("%Y/%m/%d(%a) %H:%M")
         end
-        
+
         it "コメントによって通知が作成されること" do
           fill_in "comment_content", with: "コメントしました"
           click_button "コメント"
@@ -306,7 +306,7 @@ RSpec.describe "Users", type: :system do
           expect(page).not_to have_content item.description
           expect(page).not_to have_content item.created_at
         end
-        
+
         it "コメントによって通知が作成されないこと" do
           fill_in "comment_content", with: "自分でコメント"
           click_button "コメント"
@@ -319,6 +319,81 @@ RSpec.describe "Users", type: :system do
           expect(page).not_to have_content other_item.created_at
         end
       end
+    end
+  end
+
+  context "リスト登録/解除" do
+    before do
+      login_for_system(user)
+    end
+
+    it "アイテムのお気に入り登録/解除ができること" do
+      expect(user.list?(item)).to be_falsey
+      user.list(item)
+      expect(user.list?(item)).to be_truthy
+      user.unlist(List.first)
+      expect(user.list?(item)).to be_falsey
+    end
+
+    it "トップページからリスト登録/解除ができること", js: true do
+      visit root_path
+      link = find('.list')
+      expect(link[:href]).to include "/lists/#{item.id}/create"
+      link.click
+      link = find('.unlist')
+      expect(link[:href]).to include "/lists/#{List.first.id}/destroy"
+      link.click
+      link = find('.list')
+      expect(link[:href]).to include "/lists/#{item.id}/create"
+    end
+
+    it "ユーザー個別ページからリスト登録/解除ができること", js: true do
+      visit user_path(user)
+      link = find('.list')
+      expect(link[:href]).to include "/lists/#{item.id}/create"
+      link.click
+      link = find('.unlist')
+      expect(link[:href]).to include "/lists/#{List.first.id}/destroy"
+      link.click
+      link = find('.list')
+      expect(link[:href]).to include "/lists/#{item.id}/create"
+    end
+
+    it "アイテム個別ページからリスト登録/解除ができること", js: true do
+      link = find('.list')
+      expect(link[:href]).to include "/lists/#{item.id}/create"
+      link.click
+      link = find('.unlist')
+      expect(link[:href]).to include "/lists/#{List.first.id}/destroy"
+      link.click
+      link = find('.list')
+      expect(link[:href]).to include "/lists/#{item.id}/create"
+    end
+
+    it "リスト一覧ページが期待通り表示され、リストから削除することもできること" do
+      visit lists_path
+      expect(page).not_to have_css ".list-item"
+      user.list(item)
+      item_2 = create(:item, user: user)
+      other_user.list(item_2)
+      visit lists_path
+      expect(page).to have_css ".list-item", count: 2
+      expect(page).to have_content item.name
+      expect(page).to have_content item.description
+      expect(page).to have_content List.last.created_at.strftime("%Y/%m/%d(%a) %H:%M")
+      expect(page).to have_content "このアイテムを買う予定リストに追加しました。"
+      expect(page).to have_content item_2.name
+      expect(page).to have_content item_2.description
+      expect(page).to have_content List.first.created_at.strftime("%Y/%m/%d(%a) %H:%M")
+      expect(page).to have_content "#{other_user.name}さんがこのアイテムに欲しいリクエストをしました。"
+      expect(page).to have_link other_user.name, href: user_path(other_user)
+      user.unlist(List.first)
+      visit lists_path
+      expect(page).to have_css ".list-item", count: 1
+      expect(page).to have_content item.name
+      find('.unlist').click
+      visit lists_path
+      expect(page).not_to have_css ".list-item"
     end
   end
 end
