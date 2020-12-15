@@ -8,8 +8,12 @@
   <%= render 'users/favorite_form' %>
   <%= render 'users/list_form' %>
   <span class="description"><%= item.description %></span><br>
+  <span class="buy_times">買った回数：<%= item.logs.count %>回　</span>
   <span class="recommend_degrees">おすすめ度：<%= item.recommend_degrees %></span><br>
   <span class="reference"><%= link_to "商品URL", item.reference, target: :_blank %></span>
+  <% if current_user == item.user %>
+    <%= render "logs/new_form_mini" %>
+  <% end %>
   <span class="timestamp">
     <%= time_ago_in_words(item.created_at) %>前に投稿
   </span>

@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @comment = Comment.new
+    @log = Log.new
   end
 
   def new
@@ -15,6 +16,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
     if @item.save
       flash[:success] = "アイテムが登録されました！"
+      Log.create(item_id: @item.id, content: @item.buy_memo)
       redirect_to item_path(@item)
     else
       render 'items/new'

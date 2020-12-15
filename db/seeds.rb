@@ -30,6 +30,9 @@ end
                recommend_degrees: 5,
                buy_memo: "初めて買ってよかった！",
                user_id: 1)
+  item = Item.first
+  Log.create!(item_id: item.id,
+              content: item.buy_memo)
 end
 
 # リレーションシップ
