@@ -6,6 +6,7 @@
     <%= link_to((image_tag item.picture.thumb200.url), item_path(item.id), class: 'item-picture') if item.picture.url.present? %>
   </span>
   <%= render 'users/favorite_form' %>
+  <%= render 'users/list_form' %>
   <span class="description"><%= item.description %></span><br>
   <span class="recommend_degrees">おすすめ度：<%= item.recommend_degrees %></span><br>
   <span class="reference"><%= link_to "商品URL", item.reference, target: :_blank %></span>
