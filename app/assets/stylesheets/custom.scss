@@ -1,5 +1,5 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+$main-magenta: #dd356e ;
+$main-yellow: #fee856 ;
 
 // ミックスイン
 @mixin box_sizing {
@@ -8,79 +8,80 @@
   box-sizing:         border-box;
 }
 
-// 全ページ共通
-body {
-  padding-top: 60px;
+//// ヘッダー ////
+.menu-1 a:hover {
+  text-decoration: none;
+  text-decoration-width: 1px;
 }
 
-section {
-  overflow: auto;
+// 上下幅
+.fh5co-nav .top-menu {
+  padding: 18px 0;
 }
 
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-
-// テキストの見栄え
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777 ;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
-// ヘッダー
-.navbar ul{
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
- #logo  {
-  float: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
+#logo {
   img {
-    width: 150px;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
   }
 }
 
-// フッター
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea ;
-  color: #777 ;
-  small {
-    float: center;
+// スマホ用：ヘッダーメニューが横棒三本になるところを境にロゴを拡大
+@media screen and (max-width: 768px) {
+  #logo  {
+    img {
+      max-width: 400%;
+      height: auto;
+      box-sizing: border-box;
+    }
   }
+}
+// スマホ閲覧時、横棒三本をページ上部に固定
+.fh5co-nav-toggle {
+  position: fixed;
+}
+
+
+// ロゴの上下位置調整
+.fh5co-nav #fh5co -logo {
+  font-size: 0px;
+}
+
+//// ページボディ部 ////
+#fh5co-portfolio {
+  padding: 0;
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h3 {
+    text-align: left;
+  }
+}
+
+#fh5co-about {
+  padding: 0;
+}
+
+#fh5co-wireframe {
+  padding-top: 7em;
+  padding-bottom: 0;
+}
+
+//// フッター ////
+#fh5co-footer {
+  margin-top: 3em;
+  padding: 1em 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.welcome-message {
+  display: inline-block;
 }
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb ;
+  border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
@@ -89,7 +90,8 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
- #error_explanation  {
+
+#error_explanation {
   color: red;
   ul {
     color: red;
@@ -105,16 +107,12 @@ input {
 }
 
 .checkbox {
- margin-top: -10px;
- margin-bottom: 10px;
- span {
-   margin-left: 20px;
-   font-weight: normal;
- }
-}
- #session_remember_me  {
- width: auto;
- margin-left: 0;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
 }
 
 //// プロフィールページ ////
@@ -139,6 +137,10 @@ input {
 }
 
 .account-edit {
+  margin-top: 20px;
+}
+
+.account-delete {
   margin-top: 20px;
 }
 
@@ -200,6 +202,37 @@ span.picture {
 }
 
 //// トップページ（ログイン後） ////
+// アイテム一覧
+.item-user {
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+h3.item-name {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.item-description {
+  margin-top: 10px;
+}
+
+// お気に入り
+.buy-user {
+ margin-bottom: 20px;
+}
+
+// リスト
+.list-button {
+ margin-bottom: 20px;
+}
+
+// ログ
+.add-buylog {
+ font-weight: bold;
+}
 // 「新しいアイテムを記録する」ボタン
 .btn-record {
   margin-top: 3em;
@@ -401,3 +434,9 @@ a.list, a.unlist {
   margin-bottom: 20px;
 }
 
+// 「CSV出力」ボタン
+.btn-csv {
+  color: black;
+  background-color: palegreen;
+  border-color: palegreen;
+}

@@ -1,40 +1,43 @@
 <% provide(:title, "アイテム情報の編集") %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <%= form_for(@item) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
-        <span class="picture">
-          <%= f.label :picture %>　<span class="input-unneed">※任意</span>
-          <%= f.file_field :picture, accept: 'image/jpeg,image/png', class: 'form-control', id: 'item-picture' %>
-          <%= image_tag(@item.picture.thumb400.url) if @item.picture.url.present? %>
-        </span>
-        <p />
-        <div class = 'form-group'>
-          <%= f.label :name %>　<span class="input-need">※必須</span>
-          <%= f.text_field :name, class: 'form-control', id: 'item_name' %>
-        </div>
-        <div class = 'form-group'>
-          <%= f.label :description %>　<span class="input-unneed">※任意</span>
-          <%= f.text_field :description, size: "60x4", class: 'form-control', id: 'item_description' %>
-        </div>
-        <div class = 'form-group'>
-          <%= f.label :point %>　<span class="input-unneed">※任意</span>
-          <%= f.text_field :point, size: "30x4", class: 'form-control', id: 'item_point' %>
-        </div>
-        <div class = 'form-group'>
-          <%= f.label :reference %>　<span class="input-unneed">※任意</span>
-          <%= f.text_field :reference, class: 'form-control', id: 'item_reference' %>
-        </div>
-        <div class = 'form-group'>
-          <%= f.label :recommend_degrees %> [1~5]　<span class="input-unneed">※任意</span>
-          <%= f.text_field :recommend_degrees, class: 'form-control', id: 'item_recommend_degrees' %>
-        </div>
-        <%= f.submit "更新する", class: "btn btn-primary" %>
-        <p></p>
-  　　　　　<%= link_to "アイテムを削除する", item_path(@item), method: :delete,
-                             data: { confirm: "本当にこのアイテムを削除してよろしいですか？" } %>
-      <% end %>
+<div id="fh5co-portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@item) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <span class="picture">
+            <%= f.label :picture %>　<span class="input-unneed">※任意</span>
+            <%= f.file_field :picture, accept: 'image/jpeg,image/png', class: 'form-control', id: 'item_picture' %>
+            <%= image_tag(@item.picture.thumb200.url) if @item.picture.url.present? %>
+            <p></p>
+          </span>
+          <p></p>
+          <div class = 'form-group'>
+            <%= f.label :name %>　<span class="input-need">※必須</span>
+            <%= f.text_field :name, class: 'form-control', id: 'item_name' %>
+          </div>
+          <div class = 'form-group'>
+            <%= f.label :description %>　<span class="input-unneed">※任意</span>
+            <%= f.text_field :description, size: "60x4", class: 'form-control', id: 'item_description' %>
+          </div>
+          <div class = 'form-group'>
+            <%= f.label :point %>　<span class="input-unneed">※任意</span>
+            <%= f.text_field :point, size: "30x4", class: 'form-control', id: 'item_point' %>
+          </div>
+          <div class = 'form-group'>
+            <%= f.label :reference %>　<span class="input-unneed">※任意</span>
+            <%= f.text_field :reference, class: 'form-control', id: 'item_reference' %>
+          </div>
+          <div class = 'form-group'>
+            <%= f.label :recommend_degrees %> [1~5]　<span class="input-unneed">※任意</span>
+            <%= f.text_field :recommend_degrees, class: 'form-control', id: 'item_recommend_degrees' %>
+          </div>
+          <%= f.submit "更新する", class: "btn btn-primary" %>
+          <p></p>
+          <%= link_to "アイテムを削除する", item_path(@item), method: :delete,
+                                      data: { confirm: "本当にこのアイテムを削除してよろしいですか？" } %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

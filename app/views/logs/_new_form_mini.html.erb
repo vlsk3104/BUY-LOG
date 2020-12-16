@@ -1,7 +1,7 @@
 <%= form_for(@log) do |f| %>
   <%= hidden_field_tag :item_id, @item.id %>
   <%= hidden_field_tag :list_id, @list.id if @list.present? %>
-  <p class="add-buylog"><i class="fas fa-utensils"></i> バイログを追加する</p>
+  <p class="add-buylog"><i class="fas fa-plus-circle"></i> バイログを追加する</p>
   <div class="row">
     <div class="col-md-9">
       <div class="field">
