@@ -157,7 +157,7 @@ RSpec.describe "Users", type: :system do
           expect(page).to have_link item.name
           expect(page).to have_content item.description
           expect(page).to have_content item.user.name
-          expect(page).to have_content item.recommend_degrees
+          expect(page).to have_content "★" * item.recommend_degrees + "☆" * (5 - item.recommend_degrees)
         end
       end
 

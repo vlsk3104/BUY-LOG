@@ -1,20 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <%= render 'layouts/rails_default' %>
     <%= render 'layouts/shim' %>
-
   </head>
-
   <body>
-    <div id ="page">
-      <%= render 'layouts/header' %>
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
+    <div class="fh5co-loader"></div>
+    <div id="page">
+      <%= render 'layouts/navigation' %>
+      <div id="fh5co-wireframe">
+        <div class="container">
+          <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <% end %>
+        </div>
+      </div>
       <%= yield %>
     </div>
-   <%= render 'layouts/footer' %>
+    <%= render 'layouts/footer' %>
+    <div class="gototop js-top">
+      <a href="#" class="js-gotop"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <%= render 'layouts/js' %>
   </body>
 </html>
+
