@@ -434,9 +434,60 @@ a.list, a.unlist {
   margin-bottom: 20px;
 }
 
+.btn-record {
+  margin-top: 3em;
+  color: black;
+  background-color: $main-yellow;
+  border-color: $main-yellow;
+}
+
 // 「CSV出力」ボタン
 .btn-csv {
   color: black;
   background-color: palegreen;
   border-color: palegreen;
+}
+
+//// ジャンル ////
+.title-genre-name {
+  font-weight: bold;
+}
+
+.genres {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  h5 {
+    font-size: 17px;
+  }
+}
+
+.title-genres {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table.genre {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.genre th, table.genre td {
+  padding: 10px 0;
+  text-align: center;
+}
+
+table.genre tr:nth-child(odd) {
+  background-color: #eee
+}
+
+.item-genre {
+  margin: 15px 0;
+}
+
+.title-genre-mini {
+  font-weight: bold;
+  margin-bottom: 5px;
 }

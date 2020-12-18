@@ -12,6 +12,22 @@
     <%= f.label :description %>　<span class="input-unneed">※任意</span>
     <%= f.text_field :description, size: "60x4", class: 'form-control', id: 'item_description' %>
   </div>
+
+   <%= f.fields_for :genres do |i| %>
+    <div class="row">
+      <div class="col-md-9">
+        <div class = 'form-group'>
+          <%= i.label :name %>　<span class="input-unneed">※任意</span>
+          <%= i.text_field :name, class: 'form-control genre_name' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%= render partial: "genre_form", locals: {f: f} %>
+  <%= render partial: "genre_form", locals: {f: f} %>
+  <%= render partial: "genre_form", locals: {f: f} %>
+  <%= render partial: "genre_form", locals: {f: f} %>
+
   <div class = 'form-group'>
     <%= f.label :point %>　<span class="input-unneed">※任意</span>
     <%= f.text_field :point, size: "30x4", class: 'form-control', id: 'item_point' %>

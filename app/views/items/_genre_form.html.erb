@@ -1,0 +1,9 @@
+<%= f.fields_for :genres do |i| %>
+  <div class="row">
+    <div class="col-md-9">
+      <div class = 'form-group'>
+        <%= i.text_field :name, class: 'form-control genre_name' %>
+      </div>
+    </div>
+  </div>
+<% end %>
