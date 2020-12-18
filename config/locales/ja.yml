@@ -30,7 +30,7 @@ ja:
         reference: 参照用URL
         recommend_degrees: おすすめ度
         user_id: 購入者のID
-        cook_memo: バイメモ
+        buy_memo: バイメモ
         picture: アイテムの写真
       comment:
         user_id: コメント投稿者のID

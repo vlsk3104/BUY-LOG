@@ -28,7 +28,7 @@ RSpec.describe "Items", type: :system do
         expect(page).to have_content 'ポイント'
         expect(page).to have_content '参照用URL'
         expect(page).to have_content 'おすすめ度 [1~5]'
-        expect(page).to have_content 'Buy memo'
+        expect(page).to have_content 'バイメモ'
       end
     end
 
@@ -239,7 +239,7 @@ RSpec.describe "Items", type: :system do
       end
     end
   end
-  
+
   context "検索機能" do
     context "ログインしている場合" do
       before do
@@ -272,7 +272,7 @@ RSpec.describe "Items", type: :system do
         visit edit_item_path(item)
         expect(page).to have_css 'form#item_search'
       end
-      
+
       it "フィードの中から検索ワードに該当する結果が表示されること" do
         create(:item, name: 'かに玉', user: user)
         create(:item, name: 'かに鍋', user: other_user)
