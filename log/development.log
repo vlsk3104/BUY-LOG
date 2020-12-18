@@ -43775,3 +43775,1086 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 167ms (Views: 157.9ms | ActiveRecord: 3.5ms)
 
 
+Started GET "/favorites" for 126.204.167.230 at 2020-12-18 15:59:24 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:5
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? ORDER BY "favorites"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:8
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:2
+  Rendered collection of favorites/_favorite.html.erb [1 times] (6.9ms)
+  Rendered favorites/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_rails_default.html.erb (28.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (12.9ms)
+Completed 200 OK in 80ms (Views: 72.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/lists" for 126.204.167.230 at 2020-12-18 15:59:26 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering lists/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "lists" WHERE "lists"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/lists/index.html.erb:5
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY "lists"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/lists/index.html.erb:8
+  Rendered lists/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_rails_default.html.erb (27.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (13.1ms)
+Completed 200 OK in 75ms (Views: 69.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/favorites" for 126.204.167.230 at 2020-12-18 15:59:28 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:5
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? ORDER BY "favorites"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:8
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:2
+  Rendered collection of favorites/_favorite.html.erb [1 times] (6.5ms)
+  Rendered favorites/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_rails_default.html.erb (62.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.8ms)
+Completed 200 OK in 109ms (Views: 104.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 126.204.167.230 at 2020-12-18 15:59:30 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1)[0m
+  ↳ app/views/static_pages/home.html.erb:5
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1) ORDER BY "items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 15], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.4ms)
+  Rendered users/_favorite_form.html.erb (4.7ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["LIMIT", 1]]
+  ↳ app/views/users/_unlist.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_unlist.html.erb:6
+  Rendered users/_unlist.html.erb (5.5ms)
+  Rendered users/_list_form.html.erb (10.4ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.5ms)
+  Rendered users/_favorite_form.html.erb (6.1ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 14], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (3.5ms)
+  Rendered users/_list_form.html.erb (6.7ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 13], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.2ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 13], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.1ms)
+  Rendered users/_list_form.html.erb (5.3ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (2.4ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.0ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 12], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.3ms)
+  Rendered users/_list_form.html.erb (5.0ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 11], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.5ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 11], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.2ms)
+  Rendered users/_list_form.html.erb (5.1ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered collection of items/_item.html.erb [5 times] (96.8ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (106.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (112.9ms)
+  Rendered layouts/_rails_default.html.erb (30.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.9ms)
+Completed 200 OK in 179ms (Views: 171.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/1" for 126.204.167.230 at 2020-12-18 17:08:36 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/shared/_stats.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/shared/_stats.html.erb:7
+  Rendered shared/_stats.html.erb (6.3ms)
+  Rendered users/_follow_form.html.erb (1.0ms)
+  [1m[36mItem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:37
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? ORDER BY "items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 13], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.4ms)
+  Rendered users/_favorite_form.html.erb (4.9ms)
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 13], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.5ms)
+  Rendered users/_list_form.html.erb (5.6ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (2.1ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 10], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.2ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 10], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.1ms)
+  Rendered users/_list_form.html.erb (3.7ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 10]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 10]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.4ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.7ms)
+  Rendered users/_favorite_form.html.erb (4.0ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 7], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.1ms)
+  Rendered users/_list_form.html.erb (3.8ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 7]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 7]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.4ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (2.8ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 4], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.1ms)
+  Rendered users/_list_form.html.erb (3.4ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 4]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 4]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.4ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.2ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 1], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.1ms)
+  Rendered users/_list_form.html.erb (3.1ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 1]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.4ms)
+  Rendered collection of items/_item.html.erb [5 times] (87.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:41
+  Rendered users/show.html.erb within layouts/application (110.2ms)
+  Rendered layouts/_rails_default.html.erb (22.6ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_search.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_js.html.erb (11.6ms)
+Completed 200 OK in 164ms (Views: 154.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/lists" for 126.204.167.230 at 2020-12-18 17:09:04 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering lists/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "lists" WHERE "lists"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/lists/index.html.erb:5
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY "lists"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/lists/index.html.erb:8
+  Rendered lists/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_rails_default.html.erb (23.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (12.3ms)
+Completed 200 OK in 61ms (Views: 54.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favorites" for 126.204.167.230 at 2020-12-18 17:09:05 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:5
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? ORDER BY "favorites"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:8
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:2
+  Rendered collection of favorites/_favorite.html.erb [1 times] (6.4ms)
+  Rendered favorites/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_rails_default.html.erb (23.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_js.html.erb (12.0ms)
+Completed 200 OK in 68ms (Views: 62.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists" for 126.204.167.230 at 2020-12-18 17:09:08 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering lists/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "lists" WHERE "lists"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/lists/index.html.erb:5
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY "lists"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/lists/index.html.erb:8
+  Rendered lists/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_rails_default.html.erb (25.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (13.8ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favorites" for 126.204.167.230 at 2020-12-18 17:09:15 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:5
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? ORDER BY "favorites"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/favorites/index.html.erb:8
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:2
+  Rendered collection of favorites/_favorite.html.erb [1 times] (6.3ms)
+  Rendered favorites/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_rails_default.html.erb (26.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_js.html.erb (12.8ms)
+Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notifications" for 126.204.167.230 at 2020-12-18 17:09:16 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notifications_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notifications_controller.rb:8
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" WHERE "notifications"."user_id" = ? ORDER BY "notifications"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/notifications/index.html.erb:8
+  Rendered notifications/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_rails_default.html.erb (22.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (39.8ms)
+Completed 200 OK in 93ms (Views: 80.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 126.204.167.230 at 2020-12-18 17:09:19 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1)[0m
+  ↳ app/views/static_pages/home.html.erb:5
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1) ORDER BY "items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 15], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.4ms)
+  Rendered users/_favorite_form.html.erb (5.1ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["LIMIT", 1]]
+  ↳ app/views/users/_unlist.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_unlist.html.erb:6
+  Rendered users/_unlist.html.erb (5.7ms)
+  Rendered users/_list_form.html.erb (10.0ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.5ms)
+  Rendered users/_favorite_form.html.erb (3.8ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 14], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (3.2ms)
+  Rendered users/_list_form.html.erb (6.9ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 13], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.6ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 13], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.0ms)
+  Rendered users/_list_form.html.erb (5.1ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (2.9ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.8ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 12], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.3ms)
+  Rendered users/_list_form.html.erb (5.6ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["item_id", 11], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.7ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 11], ["from_user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.3ms)
+  Rendered users/_list_form.html.erb (5.1ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered collection of items/_item.html.erb [5 times] (95.8ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 1)
+                     OR user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (104.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (109.2ms)
+  Rendered layouts/_rails_default.html.erb (22.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.7ms)
+Completed 200 OK in 162ms (Views: 154.0ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/logout" for 126.204.167.230 at 2020-12-18 17:09:29 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kCqPDSU/fa0asuWgjGg6c8EGVRt0MFgZPrSSOHZR5ub78Bzcs4CJQPqFYgFOkYp7Wvo8V8ftmol/l7PlF+SRmw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:53
+  [1m[36mUser Update (32.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2020-12-18 17:09:29.408905"], ["id", 1]]
+  ↳ app/models/user.rb:53
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:53
+Redirected to https://a110102b73ae44b0a22df7c22d47f181.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 49ms (ActiveRecord: 38.8ms)
+
+
+Started GET "/" for 126.204.167.230 at 2020-12-18 17:09:29 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_rails_default.html.erb (56.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.4ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 126.204.167.230 at 2020-12-18 17:10:00 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_rails_default.html.erb (22.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_js.html.erb (11.6ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 126.204.167.230 at 2020-12-18 17:10:14 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RaNQadZPMmC58ykja5ztsqGgYDQFEjeZUmy0nrTNwTIEjPlkZhFPZEcYGVravxwVqJFBxYBGxlo+GuDqb77xCQ==", "session"=>{"email"=>"recruit@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "recruit@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:53
+Redirected to https://a110102b73ae44b0a22df7c22d47f181.vfs.cloud9.ap-northeast-1.amazonaws.com/users/3
+Completed 302 Found in 310ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for 126.204.167.230 at 2020-12-18 17:10:15 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  ↳ app/views/shared/_stats.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  ↳ app/views/shared/_stats.html.erb:7
+  Rendered shared/_stats.html.erb (6.5ms)
+  Rendered users/_follow_form.html.erb (0.5ms)
+  [1m[36mItem Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:37
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? ORDER BY "items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 3], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 15], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.5ms)
+  Rendered users/_favorite_form.html.erb (5.1ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.5ms)
+  Rendered users/_list_form.html.erb (4.8ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (2.0ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.1ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 12], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.1ms)
+  Rendered users/_list_form.html.erb (4.8ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (1.2ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.4ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 9], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  Rendered users/_list.html.erb (0.1ms)
+  Rendered users/_list_form.html.erb (3.4ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 9]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 9]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (1.7ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.7ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 6], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/_unlist.html.erb:1
+  Rendered users/_unlist.html.erb (3.1ms)
+  Rendered users/_list_form.html.erb (6.5ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 6]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 6]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.8ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 3], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_unlist.html.erb:1
+  Rendered users/_unlist.html.erb (2.1ms)
+  Rendered users/_list_form.html.erb (5.1ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 3]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 3]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  Rendered collection of items/_item.html.erb [5 times] (96.5ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:41
+  Rendered users/show.html.erb within layouts/application (118.0ms)
+  Rendered layouts/_rails_default.html.erb (23.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_js.html.erb (12.1ms)
+Completed 200 OK in 183ms (Views: 174.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/lists" for 126.204.167.230 at 2020-12-18 17:10:22 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering lists/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "lists" WHERE "lists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/lists/index.html.erb:5
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY "lists"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/lists/index.html.erb:8
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (1.5ms)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  Rendered collection of lists/_list.html.erb [4 times] (33.4ms)
+  Rendered lists/index.html.erb within layouts/application (43.5ms)
+  Rendered layouts/_rails_default.html.erb (22.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.7ms)
+Completed 200 OK in 97ms (Views: 91.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/favorites" for 126.204.167.230 at 2020-12-18 17:11:11 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/favorites/index.html.erb:5
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? ORDER BY "favorites"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/favorites/index.html.erb:8
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:2
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/favorites/_favorite.html.erb:2
+  Rendered collection of favorites/_favorite.html.erb [2 times] (10.9ms)
+  Rendered favorites/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_rails_default.html.erb (22.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_js.html.erb (11.6ms)
+Completed 200 OK in 72ms (Views: 64.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 126.204.167.230 at 2020-12-18 17:11:16 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/static_pages/home.html.erb:5
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3) ORDER BY "items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 15], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.4ms)
+  Rendered users/_favorite_form.html.erb (5.5ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (3.1ms)
+  Rendered users/_list_form.html.erb (7.4ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (1.9ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.5ms)
+  Rendered users/_favorite_form.html.erb (4.5ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 14], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.2ms)
+  Rendered users/_list_form.html.erb (6.1ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 13], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.1ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 13], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.5ms)
+  Rendered users/_list_form.html.erb (5.2ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.2ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 12], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.1ms)
+  Rendered users/_list_form.html.erb (5.0ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 11], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.3ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 11], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.0ms)
+  Rendered users/_list_form.html.erb (5.0ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered collection of items/_item.html.erb [5 times] (92.8ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (102.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (106.9ms)
+  Rendered layouts/_rails_default.html.erb (52.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.6ms)
+Completed 200 OK in 189ms (Views: 182.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 126.204.167.230 at 2020-12-18 17:17:17 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/static_pages/home.html.erb:5
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3) ORDER BY "items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 15], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.4ms)
+  Rendered users/_favorite_form.html.erb (4.5ms)
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (3.1ms)
+  Rendered users/_list_form.html.erb (11.0ms)
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (1.3ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.5ms)
+  Rendered users/_favorite_form.html.erb (5.3ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 14], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.6ms)
+  Rendered users/_list_form.html.erb (5.9ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 13], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.2ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 13], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.4ms)
+  Rendered users/_list_form.html.erb (5.4ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.1ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 12], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.2ms)
+  Rendered users/_list_form.html.erb (5.1ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 11], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.8ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 11], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.1ms)
+  Rendered users/_list_form.html.erb (4.9ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered collection of items/_item.html.erb [5 times] (98.5ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (106.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (112.5ms)
+  Rendered layouts/_rails_default.html.erb (21.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_js.html.erb (11.6ms)
+Completed 200 OK in 163ms (Views: 156.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/lists" for 126.204.167.230 at 2020-12-18 17:17:31 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering lists/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "lists" WHERE "lists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/lists/index.html.erb:5
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY "lists"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/lists/index.html.erb:8
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (1.4ms)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (0.4ms)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lists/_list.html.erb:3
+  Rendered logs/_new_form_mini.html.erb (0.4ms)
+  Rendered collection of lists/_list.html.erb [4 times] (46.3ms)
+  Rendered lists/index.html.erb within layouts/application (52.9ms)
+  Rendered layouts/_rails_default.html.erb (39.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.6ms)
+Completed 200 OK in 122ms (Views: 117.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 126.204.167.230 at 2020-12-18 17:18:10 +0000
+Cannot render console from 126.204.167.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:22
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/static_pages/home.html.erb:5
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3) ORDER BY "items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 15], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.5ms)
+  Rendered users/_favorite_form.html.erb (5.7ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 15], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (3.3ms)
+  Rendered users/_list_form.html.erb (7.5ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 15]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (1.3ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.5ms)
+  Rendered users/_favorite_form.html.erb (4.7ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 14], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.9ms)
+  Rendered users/_list_form.html.erb (7.4ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 14]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 13], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_unfavorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (4.7ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 13], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.3ms)
+  Rendered users/_list_form.html.erb (5.3ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 13]]
+  ↳ app/views/items/_item.html.erb:27
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.4ms)
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 12], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.2ms)
+  Rendered users/_list_form.html.erb (5.3ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 12]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered logs/_new_form_mini.html.erb (0.5ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."item_id" = ? ORDER BY "favorites"."created_at" DESC LIMIT ?[0m  [["user_id", 3], ["item_id", 11], ["LIMIT", 1]]
+  ↳ app/models/user.rb:96
+  Rendered users/_favorite.html.erb (0.1ms)
+  Rendered users/_favorite_form.html.erb (3.4ms)
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."item_id" = ? AND "lists"."from_user_id" = ? ORDER BY "lists"."created_at" DESC LIMIT ?[0m  [["item_id", 11], ["from_user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:111
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_list.html.erb:5
+  Rendered users/_list.html.erb (2.4ms)
+  Rendered users/_list_form.html.erb (5.5ms)
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:18
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs" WHERE "logs"."item_id" = ?[0m  [["item_id", 11]]
+  ↳ app/views/items/_item.html.erb:27
+  Rendered collection of items/_item.html.erb [5 times] (96.2ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE follower_id = 3)
+                     OR user_id = 3)[0m
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (105.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (111.0ms)
+  Rendered layouts/_rails_default.html.erb (22.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_js.html.erb (11.9ms)
+Completed 200 OK in 165ms (Views: 154.8ms | ActiveRecord: 4.5ms)
+
+
