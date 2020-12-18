@@ -12,6 +12,17 @@
       <h3 class="item-name"><%= link_to item.name, item_path(item) %></h3>
       <div class="item-description"><%= item.description %></div>
       <div class="item-user">logged by <%= link_to item.user.name, user_path(item.user) %></div>
+
+      <div class="item-genre">
+        <p class="title-genre-mini">【ジャンル】</p>
+        <% item.genres.each_with_index do |ing, i| %>
+          <% if ing.name.present? %>
+            <%= "｜" unless i == 0 %><%= ing.name %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="item-other-info">
       <div class="item-other-info">
         <span class="buy_times">買った回数：<%= item.logs.count %>回　</span>
         <span class="recommend_degrees">おすすめ度：

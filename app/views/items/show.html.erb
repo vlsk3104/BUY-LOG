@@ -24,6 +24,24 @@
         </div>
         <h4><%= @item.description %></h4>
         <h4 class="item-reference">参考：<%= link_to "#{@item.reference}", @item.reference, target: "_blank" %></h4>
+        
+        <div class="genres">
+          <h5 class="title-genres">ジャンル</h5>
+          <div class="row">
+            <div class="col-md-8">
+              <table class="genre">
+                <% @item.genres.each do |i| %>
+                  <% if i.name.present? %>
+                    <tr>
+                      <td><%= i.name %></td>
+                    </tr>
+                  <% end %>
+                <% end %>
+              </table>
+            </div>
+          </div>
+        </div>
+        
         <div class="point">
           <h5 class="title-point">ポイント</h5>
           <h5><%= @item.point %></h5>

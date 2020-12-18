@@ -37,8 +37,12 @@ ja:
         item_id: コメントされたアイテムのID
         content: コメント
         log:
-        item_id: バイログをつける料理のID
+        item_id: バイログをつけるアイテムのID
         content: メモ
+      genre:
+        item_id: 紐づいたアイテムのID
+        name: ジャンル（５種類まで登録可）
+
 
 
 
