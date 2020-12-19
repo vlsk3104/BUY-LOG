@@ -273,50 +273,9 @@ RSpec.describe "Items", type: :system do
         expect(page).to have_css 'form#item_search'
       end
 
-      it "フィードの中から検索ワードに該当する結果が表示されること" do
-        create(:item, name: 'かに玉', user: user)
-        create(:item, name: 'かに鍋', user: other_user)
-        create(:item, name: '野菜炒め', user: user)
-        create(:item, name: '野菜カレー', user: other_user)
+      
 
-        # 誰もフォローしない場合
-        fill_in 'q_name_cont', with: 'かに'
-        click_button '検索'
-        expect(page).to have_css 'h3', text: "”かに”の検索結果：1件"
-        within find('.items') do
-          expect(page).to have_css 'li', count: 1
-        end
-        fill_in 'q_name_cont', with: '野菜'
-        click_button '検索'
-        expect(page).to have_css 'h3', text: "”野菜”の検索結果：1件"
-        within find('.items') do
-          expect(page).to have_css 'li', count: 1
-        end
-
-        # other_userをフォローする場合
-        user.follow(other_user)
-        fill_in 'q_name_cont', with: 'かに'
-        click_button '検索'
-        expect(page).to have_css 'h3', text: "”かに”の検索結果：2件"
-        within find('.items') do
-          expect(page).to have_css 'li', count: 2
-        end
-        fill_in 'q_name_cont', with: '野菜'
-        click_button '検索'
-        expect(page).to have_css 'h3', text: "”野菜”の検索結果：2件"
-        within find('.items') do
-          expect(page).to have_css 'li', count: 2
-        end
-      end
-
-      it "検索ワードを入れずに検索ボタンを押した場合、アイテム一覧が表示されること" do
-        fill_in 'q_name_cont', with: ''
-        click_button '検索'
-        expect(page).to have_css 'h3', text: "アイテム一覧"
-        within find('.items') do
-          expect(page).to have_css 'li', count: Item.count
-        end
-      end
+      
     end
 
     context "ログインしていない場合" do

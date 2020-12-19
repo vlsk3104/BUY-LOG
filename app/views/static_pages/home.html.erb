@@ -8,7 +8,7 @@
       <div class="col-md-3">
         <p><%= link_to "新しいアイテムを記録する", new_item_path, class: "btn btn-primary btn-lg btn-demo btn-record" %></p>
         <br>
-      <p><%= link_to "みんなのアイテムをCSV出力", "#", class: "btn btn-primary btn-lg btn-demo btn-csv" %></p>
+      <p><%= link_to "みんなのアイテムをCSV出力", items_path(format: :csv), class: "btn btn-primary btn-lg btn-demo btn-csv" %></p>
       </div>
     </div>
   </div>
