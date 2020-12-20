@@ -17,10 +17,11 @@
                   <%= f.password_field :password, class: 'form-control', id: 'recruit_user_password', value: 'password' %>
                 </div>
                 <div class = 'form-group'>
-            <%= f.label :remember_me, class: "checkbox inline" do %>
-              <%= f.check_box :remember_me %>
-              <span>ログインしたままにする</span>
-            <% end %>
+                  <span>ログインしたままにする</span>
+                  <%= f.label :remember_me, class: "checkbox inline" do %>
+                  <%= f.check_box :remember_me %>
+                  
+                  <% end %>
                 </div>
                 <%= f.submit '専用ログイン', class: 'btn btn-primary' %>
               <% end %>
