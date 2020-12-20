@@ -1,7 +1,9 @@
 <li id="log-<%= log.id %>">
   <div class="row">
     <div class="col-md-2">
-      <span class="buy_times"><%= @logs.count %>回目</span>
+
+      <span class="buy_times"><%= @logs.count - log_counter %>回目</span>
+
     </div>
     <div class="col-md-3">
       <span class="created_at"><%= log.created_at.strftime("%Y/%m/%d(%a)") %></span>
