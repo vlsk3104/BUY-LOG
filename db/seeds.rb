@@ -31,15 +31,15 @@ user3.follow(user1)
 user3.follow(user2)
 
 # アイテム
-description1 = "デザインが素晴らしいアイテムです。"
-description2 = "持ってるだけで気持ちが高まるアイテムです。"
-description3 = "今年１番買ってよかったアイテム！"
+description1 = "デザインがかわいいアイテムです。"
+description2 = "コストパフォーマンスに優れたアイテム。"
+description3 = "高性能で使いやすいアイテム！"
 point1 = "今の時期安く買える！"
-point2 = "ポイントは色がシンプルなこと！"
+point2 = "オンライン限定モデル"
 point3 = "家事の時間が減ること間違いなし！"
-buy_memo1 = "家族のプレゼント用で購入"
+buy_memo1 = "プレゼント用で購入"
 buy_memo2 = "保証が1年間"
-buy_memo3 = "人気なので近くの店では既に売り切れしてた"
+buy_memo3 = "人気すぎて在庫がほとんどなさそう"
 
 ## 3ユーザー、それぞれ5アイテムずつ作成
 Item.create!(
@@ -82,7 +82,7 @@ Item.create!(
       name: "椅子",
       user_id: 3,
       description: description1,
-      point: point3,
+      point: point2,
       reference: "https://www.ikea.com/jp/ja/",
       recommend_degrees: 4,
       buy_memo: buy_memo1,
@@ -98,7 +98,7 @@ Item.create!(
     {
       name: "バック",
       user_id: 1,
-      description: description2,
+      description: description1,
       point: point2,
       reference: "https://www.amazon.co.jp/",
       recommend_degrees: 3,
@@ -116,9 +116,9 @@ Item.create!(
       name: "apple watch",
       user_id: 2,
       description: description3,
-      point: point2,
+      point: point1,
       reference: "https://www.apple.com/jp/",
-      recommend_degrees: 5,
+      recommend_degrees: 2,
       buy_memo: buy_memo1,
       picture: open("#{Rails.root}/public/images/item5.jpg"),
       genres_attributes: [
@@ -132,10 +132,10 @@ Item.create!(
     {
       name: "ドライヤー",
       user_id: 3,
-      description: description1,
+      description: description3,
       point: point3,
       reference: "https://www.rakuten.co.jp/",
-      recommend_degrees: 3,
+      recommend_degrees: 2,
       buy_memo: buy_memo2,
       picture: open("#{Rails.root}/public/images/item6.jpg"),
       genres_attributes: [
@@ -150,7 +150,7 @@ Item.create!(
       name: "airpods pro",
       user_id: 1,
       description: description3,
-      point: point2,
+      point: point1,
       reference: "https://www.apple.com/jp/",
       recommend_degrees: 5,
       buy_memo: buy_memo2,

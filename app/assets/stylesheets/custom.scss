@@ -115,6 +115,28 @@ input {
   }
 }
 
+//// トップページ（ログイン前） ////
+.recruit-login {
+  background-color: #f7f6e7;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: solid 3px #000000 ;
+}
+
+.title-form {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.description-form {
+  margin-bottom: 20px;
+}
+
+.recruit-account {
+  margin-top: 20px;
+}
+
 //// プロフィールページ ////
 .title-profile {
   padding-bottom: 10px;
@@ -634,6 +656,7 @@ table.genre {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  background-color: #f9f9f9
 }
 
 table.genre th, table.genre td {
