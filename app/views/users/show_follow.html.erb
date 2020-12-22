@@ -7,7 +7,7 @@
           <%= gravatar_for @user %>
           <h1><%= @user.name %></h1>
           <span><%= link_to "プロフィール", @user %></span>
-          <span><b>料理</b><%= @user.items.count %><b>件</b></span>
+          <span><b>アイテム</b><%= @user.items.count %><b>件</b></span>
         </section>
         <section class="stats">
           <%= render 'shared/stats' %>
