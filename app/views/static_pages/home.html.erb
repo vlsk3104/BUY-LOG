@@ -1,0 +1,35 @@
+<% if logged_in? %>
+  <div id="fh5co-portfolio">
+    <div class="container">
+      <div class="col-md-9">
+        <h3>みんなのアイテム (<%= @feed_details.count %>)</h3>
+        <%= render 'shared/feed' %>
+      </div>
+      <div class="col-md-3">
+        <p><%= link_to "新しいアイテムを記録する", new_item_path, class: "btn btn-primary btn-lg btn-demo btn-record" %></p>
+        <br>
+      <p><%= link_to "みんなのアイテムをCSV出力", items_path(format: :csv), class: "btn btn-primary btn-lg btn-demo btn-csv" %></p>
+      </div>
+    </div>
+  </div>
+<% else %>
+<%= render 'shared/recruit_login' %>
+  <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="display-t js-fullheight">
+            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+              <h1>買ったアイテムに、<br>写真やメモをつけて保存。</h1>
+              <h2>レビューやクチコミ、もう迷わない！</h2>
+              <p>
+                <%= link_to 'バイログを始める', signup_path, class: "btn btn-primary btn-lg btn-demo" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<% end %>
