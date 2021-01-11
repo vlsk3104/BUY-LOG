@@ -34,7 +34,7 @@ https://docs.google.com/spreadsheets/d/15Wu13e5ZLY9hdefM0GTnZtXSc45SiiBv7rAOXJ8J
 - JSライブラリ：jQuery
 - IDE：Cloud9
 - フロント:Bootstrap4
-- AWS,現在勉強中(機能追加)
+- AWS,RDSのVPCの移行中
 
 
 ## 使用素材
