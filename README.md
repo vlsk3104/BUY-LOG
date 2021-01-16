@@ -35,7 +35,7 @@ https://docs.google.com/spreadsheets/d/15Wu13e5ZLY9hdefM0GTnZtXSc45SiiBv7rAOXJ8J
 - IDE：Cloud9
 - フロント:Bootstrap4
 - AWS
-- docker勉強中 udmy
+- docker file 勉強中 udmy
 
 ## 使用素材
 * O-DAN :https://o-dan.net/ja/
